@@ -1,6 +1,27 @@
-# RecursiveTranslator
-YOU EVER WANTED TO SOUND LIKE A MORON??? DO YOU FEEL LIKE PEOPLE UNDERSTAND WHAT YOU'RE TRYNNA SAY *TOO MUCH*? WELL I HAVE THE TOOL FOR YOU!
+# Recursive Translator
 
-INTRODUCING THE RECURSIVE TRANSLATOR! IS IT GOOD? NO. IS IT EFFICIENT? NOT SURE. DOES IT GET THE JOB DONE? HELL YEAH! JUST BOOT UP A VIRTUAL ENVIRONMENT AND RUN: ```pip install -r requirements.txt``` AND RUN ```rectran.py``` AND YOU'RE SET!
+**YOU EVER WANTED TO SOUND LIKE A MORON???**  
+Do you feel like people understand what you're trynna say *too much*?  
+Well, this is the tool for you.
 
-This is work in progress (obviously, it sucks right now.)
+## Introducing: The Recursive Translator
+
+> **Is it good?** No.  
+> **Is it efficient?** Not sure.  
+> **Does it get the job done?** Hell yeah.
+
+## Getting Started
+
+Set up a virtual environment and run the following:
+
+```bash
+pip install -r requirements.txt
+python rectran.py
+```
+
+And you're good to go.
+
+## Disclaimer
+
+This is a work in progress.  
+*(Obviously. It kinda sucks right now.)*
