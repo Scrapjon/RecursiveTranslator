@@ -1,6 +1,6 @@
 from googletrans import Translator
 from googletrans.constants import LANGUAGES
-import random, asyncio, tkinter
+import random, asyncio
 
 
 async def __main__():
