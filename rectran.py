@@ -3,7 +3,7 @@ from googletrans.constants import LANGUAGES
 import random, asyncio
 
 
-async def __main__():
+async def main():
     while True:
         text_input = input("What do you want translated?\nType 'exit' to quit.\n")
         if text_input == "exit":
@@ -16,14 +16,18 @@ async def __main__():
 async def run_translate(text_input: str, num: int) -> str:
     translator=Translator()
     for i in range(num):
-        text_input = await translator.translate(text=text_input, dest=random.choice(list(LANGUAGES.values())))
-        text_input = text_input.text
-        print(f"Iteration {i}")
-    response = await translator.translate(text=text_input, dest="English")
+        try:
+            language = random.choice(list(LANGUAGES.values()))
+            text_input = await translator.translate(text=text_input, dest=language)
+            text_input = text_input.text
+            print(f"Iteration {i}, Translating to language: {language}")
+        except Exception as e:
+            print(f"Iteration failed due to: {e}")
+    response = await translator.translate(text=text_input, dest="en")
     return response.text
     
 
 
 if __name__ == "__main__":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy()) # stop the runtime error grrrr
-    asyncio.run(__main__())
+    asyncio.run(main())
