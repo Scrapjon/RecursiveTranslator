@@ -159,5 +159,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-input.txt # Prevent pushing of input text file
-output.txt # Prevent pushing of output text file
+
+# Prevent pushing of input text file
+input.txt
+# Prevent pushing of output text file
+output.txt 
