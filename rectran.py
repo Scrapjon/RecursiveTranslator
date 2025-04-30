@@ -10,7 +10,7 @@ async def __main__():
         if text_input == "exit":
             break
         elif text_input:
-            for i in range(5):
+            for i in range(10):
                 text_input = await translator.translate(text=text_input, dest=random.choice(list(LANGUAGES.values())))
                 text_input = text_input.text
                 print(f"Iteration {i}")

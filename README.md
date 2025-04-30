@@ -1,2 +1,6 @@
 # RecursiveTranslator
-Calls Google Translate recursively with random languages
+YOU EVER WANTED TO SOUND LIKE A MORON??? DO YOU FEEL LIKE PEOPLE UNDERSTAND WHAT YOU'RE TRYNNA SAY *TOO MUCH*? WELL I HAVE THE TOOL FOR YOU!
+
+INTRODUCING THE RECURSIVE TRANSLATOR! IS IT GOOD? NO. IS IT EFFICIENT? NOT SURE. DOES IT GET THE JOB DONE? HELL YEAH! JUST BOOT UP A VIRTUAL ENVIRONMENT AND RUN: ```pip install -r requirements.txt``` AND RUN ```rectran.py``` AND YOU'RE SET!
+
+This is work in progress (obviously, it sucks right now.)
