@@ -10,11 +10,10 @@ async def main():
             break
         elif text_input:
             translated_output = await run_translate(text_input, 10)
-            print(translated_output)
-        print("\n")
+            print(translated_output + "/n")
 
 async def run_translate(text_input: str, num: int) -> str:
-    translator=Translator()
+    translator = Translator()
     for i in range(num):
         try:
             language = random.choice(list(LANGUAGES.values()))
