@@ -12,14 +12,18 @@ async def main():
             translated_output = await run_translate(text_input, 10)
             print(translated_output + "/n")
 
-async def run_translate(text_input: str, num: int) -> str:
+async def run_translate(text_input: str, num: int, progress_callback = None) -> str:
     translator = Translator()
     for i in range(num):
         try:
             language = random.choice(list(LANGUAGES.values()))
             text_input = await translator.translate(text=text_input, dest=language)
             text_input = text_input.text
-            print(f"Iteration {i}, Translating to language: {language}")
+            text_input = await translator.translate(text=text_input, dest="en")
+            text_input = text_input.text
+            #print(f"Iteration {i}, Translating to language: {language}")
+            if progress_callback:
+                progress_callback(i+1, num)
         except Exception as e:
             print(f"Iteration failed due to: {e}")
     response = await translator.translate(text=text_input, dest="en")
