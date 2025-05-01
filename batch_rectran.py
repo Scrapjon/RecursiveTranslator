@@ -14,11 +14,11 @@ async def main():
             batch_string = "".join(batch_lines)
             chunks.append(batch_string)
 
-        tasks = [asyncio.create_task(run_translate(chunk,10)) for chunk in chunks] # so it doesnt take so damn long!
+        tasks = [asyncio.create_task(run_translate(chunk,5)) for chunk in chunks] # so it doesnt take so damn long!
         results = await asyncio.gather(*tasks)
         translated_output = "".join(results)
         
-    with open("output.txt", "w") as f:
+    with open("output.txt", "w", encoding="utf-8") as f:
         f.write(translated_output)
         print(translated_output)
 
